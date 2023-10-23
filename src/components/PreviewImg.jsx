@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 /* eslint-disable react/prop-types */
@@ -6,7 +6,14 @@ function PreviewImg({ uploadImageData, loading }) {
   const [copy, setCopy] = useState(false);
   const { data } = uploadImageData || {};
   const { url, delete_url } = data || {};
-  console.log(copy);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (copy) {
+        setCopy(false);
+      }
+    }, 3000);
+  }, [copy]);
 
   return (
     <div className="w-full h-full overflow-hidden">
@@ -21,7 +28,7 @@ function PreviewImg({ uploadImageData, loading }) {
                 type="button"
                 className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm w-full py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none "
               >
-                Copy image url
+                {copy ? "Copied url" : "Copy image url"}
               </button>
             </CopyToClipboard>
 

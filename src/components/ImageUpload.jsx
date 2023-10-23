@@ -47,7 +47,7 @@ const ImageUpload = ({ setUploadImageData, setLoading }) => {
           className="text-white bg-blue-700 hover:bg-blue-800   font-medium rounded-lg text-sm w-full py-2 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none "
         >
           Upload
-        </button>
+        </button> 
       )}
     </div>
   );
