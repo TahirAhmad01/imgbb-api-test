@@ -23,14 +23,10 @@ const ImageUpload = ({ setUploadImageData, setLoading }) => {
           },
         }
       );
-
       setUploadImageData(response.data);
       setLoading(false);
-
-      // Handle the response from the API
       console.log("Image uploaded successfully:", response.data);
     } catch (error) {
-      // Handle errors, e.g., network issues, invalid API key, etc.
       console.error("Error uploading image:", error);
       setLoading(false);
     }
