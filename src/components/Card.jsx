@@ -8,7 +8,7 @@ function Card() {
 
   return (
     <React.Fragment>
-      <div className="p-4 bg-white shadow rounded-xl w-[900px]">
+      <div className="p-4 rounded-xl w-[900px] bg-white shadow-[rgba(17,_17,_26,_0.8)_0px_0px_16px]">
         <div className="text-center text-2xl font-semibold mb-6">
           ImgBB image upload
         </div>
