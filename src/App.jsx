@@ -9,7 +9,7 @@ function App() {
         <Card />
         <ToastContainer
           position="bottom-right"
-          autoClose={3000}
+          autoClose={2500}
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick

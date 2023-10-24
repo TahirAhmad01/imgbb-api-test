@@ -10,6 +10,7 @@ const ImageUpload = ({ setUploadImageData, setLoading }) => {
     const formData = new FormData();
     formData.append("image", image);
     setLoading(true);
+    setUploadImageData("");
     try {
       const response = await axios.post(
         "https://api.imgbb.com/1/upload",
