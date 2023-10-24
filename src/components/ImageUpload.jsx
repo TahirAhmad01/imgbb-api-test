@@ -19,7 +19,7 @@ const ImageUpload = ({ setUploadImageData, setLoading }) => {
             "Content-Type": "multipart/form-data",
           },
           params: {
-            key: import.meta.env.VITE_IMGBB_API_KEY, // Replace with your actual API key
+            key: import.meta.env.VITE_IMGBB_API_KEY,
           },
         }
       );
@@ -40,10 +40,10 @@ const ImageUpload = ({ setUploadImageData, setLoading }) => {
         <button
           type="button"
           onClick={handleImageUpload}
-          className="text-white bg-blue-700 hover:bg-blue-800   font-medium rounded-lg text-sm w-full py-2 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none "
+          className={`text-blue-900 hover:text-white bg-blue-100 hover:bg-blue-500 font-medium rounded-lg text-sm w-full py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none disabled:bg-blue-200 disabled:text-blue-900 `}
         >
           Upload
-        </button> 
+        </button>
       )}
     </div>
   );
